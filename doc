@@ -1,0 +1,118 @@
+Student Record Management System (C Program)
+🔹 1. Title
+Student Record Management System using File Handling in C
+🔹 2. Objective
+To develop a C program that:
+Accepts student details (name, roll number, marks)
+Calculates average and grade
+Stores the data permanently in a file
+🔹 3. Description
+This program allows the user to enter student details and calculates their academic performance. The calculated result is displayed on the screen and stored in a file named student_records.txt using file handling in append mode.
+🔹 4. Features
+Takes input for student details
+Calculates average marks
+Assigns grade based on average
+Saves records in a file
+Supports multiple entries (append mode)
+🔹 5. Algorithm
+Start
+Declare variables (name, roll number, marks, average, grade)
+Open file student_records.txt in append mode
+If file opening fails
+→ Display error and stop
+Input student name
+Input roll number
+Input marks of 5 subjects
+Calculate average
+→ avg = (m1 + m2 + m3 + m4 + m5) / 5
+Display student details
+Assign grade based on average:
+avg ≥ 90 → Grade A
+avg ≥ 80 → Grade B
+avg ≥ 70 → Grade C
+avg ≥ 60 → Grade D
+else → Grade F
+Display grade
+Write data to file using fprintf()
+Close the file
+Display success message
+Stop
+Flowchart
+┌──────────────┐
+        │    START     │
+        └──────┬───────┘
+               │
+       ┌───────▼────────┐
+       │ Declare variables│
+       └───────┬────────┘
+               │
+       ┌───────▼────────┐
+       │ Open file       │
+       └───────┬────────┘
+               │
+        ┌──────▼──────┐
+        │ File opened? │
+        └──────┬──────┘
+         Yes   │   No
+               │
+               ▼
+        ┌──────────────┐
+        │ Show error & │
+        │    STOP      │
+        └──────────────┘
+
+               │
+               ▼
+     ┌─────────────────────┐
+     │ Input student data  │
+     └────────┬────────────┘
+              │
+     ┌────────▼────────────┐
+     │ Calculate average   │
+     └────────┬────────────┘
+              │
+     ┌────────▼────────────┐
+     │ Assign grade        │
+     └────────┬────────────┘
+              │
+     ┌────────▼────────────┐
+     │ Display result      │
+     └────────┬────────────┘
+              │
+     ┌────────▼────────────┐
+     │ Write to file       │
+     └────────┬────────────┘
+              │
+     ┌────────▼────────────┐
+     │ Close file          │
+     └────────┬────────────┘
+              │
+        ┌─────▼─────┐
+        │   STOP    │
+        └───────────┘
+
+
+
+🔹 7. Output Example
+
+Enter student name: Ravi
+Enter roll number: 101
+Enter marks of 5 subjects: 85 90 88 92 87
+
+Student Name: Ravi
+Roll Number: 101
+Average: 88.40
+Grade: B
+
+Record saved successfully in student_records.txt!
+🔹 8. Advantages
+Simple and easy to understand
+Demonstrates file handling in C
+Stores data permanently
+Useful for basic student record systems
+🔹 9. Limitations
+Only handles one student at a time
+No option to view or edit previous records
+Limited validation of input
+🔹 10. Conclusion
+This project successfully demonstrates how to use file handling in C to store student records. It also shows the use of conditional statements and basic input/output operations.
